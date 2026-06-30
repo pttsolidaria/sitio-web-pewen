@@ -1,0 +1,54 @@
+/* variables.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Fonts */
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Outfit', sans-serif;
+
+    /* Theme colors - Light Theme (default) */
+    --bg-primary: #fafafc;
+    --bg-secondary: #ffffff;
+    --bg-accent: #f0f2f5;
+    
+    --text-primary: #0a192f;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    
+    --color-primary: #172a45;
+    --color-gold: #c5a85c;
+    --color-gold-hover: #a88e46;
+    --color-gold-light: rgba(197, 168, 92, 0.1);
+    
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
+    
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    --border-radius: 12px;
+}
+
+[data-theme="dark"] {
+    /* Theme colors - Dark Theme */
+    --bg-primary: #0a192f;
+    --bg-secondary: #172a45;
+    --bg-accent: #0f223a;
+    
+    --text-primary: #f8f9fa;
+    --text-secondary: #cbd5e1;
+    --text-muted: #8892b0;
+    
+    --color-primary: #3060cf;
+    --color-gold: #f0c265;
+    --color-gold-hover: #e5b045;
+    --color-gold-light: rgba(240, 194, 101, 0.15);
+    
+    --border-color: #233554;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
+}

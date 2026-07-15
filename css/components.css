@@ -23,18 +23,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 110px; /* Increased from 80px */
+    transition: height var(--transition-normal);
 }
 
 .nav-brand {
     display: flex;
+    flex-direction: column; /* Vertical stack */
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 6px;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.05rem; /* Smaller font to fit under the logo */
     color: #ffffff;
     transition: transform var(--transition-fast);
+    text-align: center;
+    line-height: 1.1;
 }
 
 [data-theme="light"] .nav-brand {
@@ -42,12 +47,12 @@
 }
 
 .nav-brand:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 .nav-brand-logo {
-    height: 48px;
-    width: 48px;
+    height: 44px; /* Slightly smaller to fit vertical container */
+    width: 44px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--color-gold);
@@ -56,18 +61,42 @@
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 24px;
     align-items: center;
 }
 
 .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.88rem; /* Slightly smaller for 2-line nav */
     font-weight: 500;
     color: rgba(255, 255, 255, 0.75);
     position: relative;
     padding: 6px 0;
     transition: color var(--transition-fast);
+    text-align: center;
+    display: inline-block;
+    line-height: 1.3;
 }
+
+.nav-link.highlighted {
+    background-color: var(--color-gold);
+    color: #0a192f !important;
+    font-weight: 600;
+    padding: 8px 16px !important;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.15);
+    transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nav-link.highlighted:hover {
+    background-color: var(--color-gold-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.35);
+}
+
+.nav-link.highlighted::after {
+    display: none !important;
+}
+
 
 [data-theme="light"] .nav-link {
     color: var(--text-secondary);
@@ -264,7 +293,7 @@
 /* --- HERO --- */
 .hero {
     min-height: 100vh;
-    padding-top: 120px;
+    padding-top: 140px;
     display: flex;
     align-items: center;
     color: #ffffff;
